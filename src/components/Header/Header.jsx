@@ -1,10 +1,12 @@
 import styles from "./Header.module.scss";
+import logoImg from "../../images/logo.svg";
+
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <a className={styles.logo} href="#">
-        <img src="src/images/logo.svg" alt="Логотип" />
+        <img src={logoImg} alt="Логотип" />
       </a>
       <nav className={styles.nav}>
         <ul>
@@ -35,7 +37,9 @@ const Header = () => {
           </a>
         </li>
         <li>
-          <a className={styles.phone__num} href="tel:+73451233445">8-345-123-34-45</a>
+          <a className={styles.phone__num} href="tel:+73451233445">
+            8-345-123-34-45
+          </a>
         </li>
       </ul>
     </header>
