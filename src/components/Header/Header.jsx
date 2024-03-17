@@ -1,5 +1,6 @@
 import styles from "./Header.module.scss";
 import logoImg from "../../images/logo.svg";
+import phoneImg from "../../images/phone.svg";
 
 
 const Header = () => {
@@ -33,7 +34,7 @@ const Header = () => {
       <ul className={styles.phone}>
         <li>
           <a href="tel:+73451233445">
-            <img src="src/images/phone.svg" alt="телефон: +73451233445" />
+            <img src={phoneImg} alt="телефон: +73451233445" />
           </a>
         </li>
         <li>
