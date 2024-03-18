@@ -19,7 +19,7 @@ const Main = () => {
 
         <div className={styles.buttons}>
           <BtnWhite />
-          <BtnOther />
+          <BtnOther text="Бесплатная консультация" />
         </div>
 
         <div className={styles.main__futer}>
