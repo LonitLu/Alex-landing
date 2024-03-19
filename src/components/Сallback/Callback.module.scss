@@ -7,12 +7,23 @@
   flex-direction: column;
   position: absolute;
   z-index: 20;
-  left: -612px;
+  left: 0;
   top: 0;
   padding-top: 40px;
   padding-right: 50px;
   padding-left: 75px;
   background: rgb(15, 29, 69);
+  animation: ani10601 1s linear;
+  -webkit-animation: ani10601 1s linear;
+}
+
+@keyframes ani10601 {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .exit {
@@ -45,6 +56,7 @@
 
 .checkbox {
   margin-top: 110px;
+  margin-bottom: 50px;
 
   input {
     position: absolute;

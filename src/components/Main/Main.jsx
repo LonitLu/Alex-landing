@@ -7,6 +7,7 @@ import mentorImg from "../../images/mentor.png";
 
 
 const Main = () => {
+
   return (
     <main className={styles.main}>
       <div className={styles.content}>
