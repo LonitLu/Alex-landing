@@ -1,13 +1,16 @@
 import styles from "./BtnWhite.module.scss";
 import img from "../../images/arrowBlue.png";
+import useDeviceDetect from "../../halpers/useDeviceDetect";
 
 const BtnWhite = () => {
+  const { isMobile } = useDeviceDetect();
+  const textDesktop = "Записаться на консультацию";
+  const textMobile = "Записаться";
+
   return (
     <button className={styles.btn}>
-      <p className={styles.btn__text}>Записаться на консультацию</p>
-      <div className={styles.btn__img}>
-        <img src={img} alt="" />
-      </div>
+      <p className={styles.btn__text}>{isMobile ? textMobile : textDesktop}</p>
+      <img className={styles.btn__img} src={img} alt="" />
     </button>
   );
 };

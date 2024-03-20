@@ -19,10 +19,14 @@
   }
 }
 
-.phone {
+.menu__mobile {
+  display: none;
+}
+
+.nav__right {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   @include font-monst;
   font-size: 18px;
   font-weight: 600;
@@ -31,5 +35,26 @@
 @media (max-width: 1100px) {
   .phone__num {
     display: none;
+  }
+}
+
+@media (max-width: 910px) {
+  .header {
+    margin-top: 25px;
+  }
+
+  .logo {
+    img {
+      width: 96px;
+      height: 20px;
+    }
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu__mobile {
+    display: block;
   }
 }

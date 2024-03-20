@@ -14,3 +14,19 @@
   margin: 0 auto;
   border-top: 1px solid #133457;
 }
+
+@media (max-width: 910px) {
+  .container {
+    padding-left: 16px;
+  }
+}
+
+// @media (max-width: 680px) {
+//   .app {
+//     // min-height: 100%;
+//   }
+
+//   .container {
+//     // min-height: 100dvh
+//   }
+// }

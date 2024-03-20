@@ -1,7 +1,7 @@
 import styles from "./Header.module.scss";
 import logoImg from "../../images/logo.svg";
 import phoneImg from "../../images/phone.svg";
-
+import menuMobileImg from "../../images/menuMobile.svg";
 
 const Header = () => {
   return (
@@ -9,6 +9,7 @@ const Header = () => {
       <a className={styles.logo} href="#">
         <img src={logoImg} alt="Логотип" />
       </a>
+
       <nav className={styles.nav}>
         <ul>
           <li>
@@ -31,7 +32,10 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <ul className={styles.phone}>
+
+      <ul className={styles.nav__right}>
+        <img className={styles.menu__mobile} src={menuMobileImg} alt="Меню" />
+
         <li>
           <a href="tel:+73451233445">
             <img src={phoneImg} alt="телефон: +73451233445" />

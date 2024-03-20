@@ -34,7 +34,7 @@
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
-}
+  }
 }
 
 .sum:hover {
@@ -46,7 +46,7 @@
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
-}
+  }
 }
 
 .text {
@@ -57,4 +57,25 @@
   font-weight: 400;
   line-height: 122.8%;
   text-transform: lowercase;
+}
+
+@media (max-width: 680px) {
+  .inner {
+    width: 60px;
+    height: 100%;
+    padding-left: 8px;
+  }
+
+  .sum {
+    font-size: 16px;
+
+    .tooltip {
+      width: 100px;
+      font-size: 9px;
+    }
+  }
+  .text {
+    font-size: 10px;
+    margin-top: 5px;
+  }
 }
