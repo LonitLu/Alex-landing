@@ -1,11 +1,22 @@
 import styles from "./Callback.module.scss";
 import img from "../../images/exit.svg";
 import BtnOther from "../Buttons/BtnOther";
+import PropTypes from "prop-types";
 
-const Callback = () => {
+
+const Callback = ({toggleDetails}) => {
+    const handleClose = () => {
+    toggleDetails();
+  };
+
   return (
     <div className={styles.Callback}>
-      <img className={styles.exit} src={img} alt="Закрыть" />
+      <img
+        className={styles.exit}
+        src={img}
+        alt="Закрыть"
+        onClick={handleClose}
+      />
       <h2 className={styles.title}>Закажите обратный звонок</h2>
 
       <form className={styles.form} action="">
@@ -37,6 +48,10 @@ const Callback = () => {
       <BtnOther text="Заказать обратный звонок" />
     </div>
   );
+};
+
+Callback.propTypes = {
+  toggleDetails: PropTypes.node,
 };
 
 export default Callback;
