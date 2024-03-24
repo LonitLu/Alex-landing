@@ -3,6 +3,7 @@ import img from "../../images/arrowWhite.png";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import Callback from "../Callback/Callback";
+import Blur from "../Blur/Blur";
 
 const BtnOther = ({ text }) => {
   const [show, setShow] = useState(false);
@@ -18,6 +19,7 @@ const BtnOther = ({ text }) => {
         <img className={styles.btn__img} src={img} alt="" />
       </button>
       {show && <Callback toggleDetails={toggleDetails} />}
+      {show && <Blur toggleDetails={toggleDetails} />}
     </>
   );
 };
