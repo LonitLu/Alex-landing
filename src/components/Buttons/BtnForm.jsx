@@ -1,4 +1,4 @@
-import styles from "./BtnOther.module.scss";
+import stylesForm from "./BtnForm.module.scss";
 import img from "../../images/arrowWhite.png";
 import PropTypes from "prop-types";
 import { useState } from "react";
@@ -13,9 +13,9 @@ const BtnOther = ({ text }) => {
 
   return (
     <>
-      <button className={styles.btn} onClick={toggleDetails}>
-        <p className={styles.btn__text}>{text}</p>
-        <img className={styles.btn__img} src={img} alt="" />
+      <button className={stylesForm.btn} onClick={toggleDetails}>
+        <p className={stylesForm.btn__text}>{text}</p>
+        <img className={stylesForm.btn__img} src={img} alt="" />
       </button>
       {show && <Callback toggleDetails={toggleDetails} />}
     </>

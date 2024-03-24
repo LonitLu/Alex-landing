@@ -1,23 +1,25 @@
 import styles from "./Callback.module.scss";
 import img from "../../images/exit.svg";
-import BtnOther from "../Buttons/BtnOther";
+import BtnForm from "../Buttons/BtnForm";
 import PropTypes from "prop-types";
 
-
-const Callback = ({toggleDetails}) => {
-    const handleClose = () => {
+const Callback = ({ toggleDetails }) => {
+  const handleClose = () => {
     toggleDetails();
   };
 
   return (
-    <div className={styles.Callback}>
+    <div className={styles.callback}>
       <img
         className={styles.exit}
         src={img}
         alt="Закрыть"
         onClick={handleClose}
       />
-      <h2 className={styles.title}>Закажите обратный звонок</h2>
+      <h2 className={styles.title}>
+        Закажите <br />
+        обратный звонок
+      </h2>
 
       <form className={styles.form} action="">
         <label htmlFor="name">
@@ -45,7 +47,7 @@ const Callback = ({toggleDetails}) => {
           <span>Согласен на сохранение и обработку персональных данных</span>
         </label>
       </form>
-      <BtnOther text="Заказать обратный звонок" />
+      <BtnForm text="Заказать обратный звонок" />
     </div>
   );
 };

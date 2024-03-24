@@ -1,6 +1,6 @@
 import styles from "./BtnWhite.module.scss";
 import img from "../../images/arrowBlue.png";
-import useDeviceDetect from "../../halpers/useDeviceDetect";
+import useDeviceDetect from "../../helpers/useDeviceDetect";
 
 const BtnWhite = () => {
   const { isMobile } = useDeviceDetect();

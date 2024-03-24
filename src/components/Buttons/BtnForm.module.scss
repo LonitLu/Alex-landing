@@ -1,7 +1,7 @@
 @import "../styles/stylesMixin.scss";
 
 .btn {
-  width: 380px;
+  max-width: 380px;
   height: 71px;
   display: flex;
   justify-content: space-between;
@@ -32,19 +32,19 @@
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 612px) {
   .btn {
-    width: 126px;
-    height: 30px;
+    max-width: 251px;
+    height: 47px;
 
     .btn__text {
-      font-size: 10px;
+      font-size: 14px;
     }
 
     .btn__img {
       display: flex;
-      width: 30px;
-      padding: 15px 5px 5px 15px;
+      width: 47px;
+      padding: 25px 5px 5px 25px;
     }
   }
 }

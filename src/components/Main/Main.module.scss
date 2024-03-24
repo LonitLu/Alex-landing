@@ -9,7 +9,6 @@
 .content {
   max-width: 800px;
   margin-top: 150px;
-  z-index: 20;
 
   .title {
     max-width: 747px;
@@ -51,6 +50,7 @@
 .mentor {
   margin-top: 57px;
   margin-left: auto;
+  bottom: 0;
 }
 
 @media (max-width: 1330px) {
@@ -78,11 +78,11 @@
   }
 
   .mentor {
-    width: 475px;
+    margin-right: 0;
+    width: 450px;
     height: 632px;
     position: absolute;
-    z-index: 10;
-    bottom: 0;
+    z-index: -1;
     right: -80px;
   }
 }
@@ -96,6 +96,8 @@
 
 @media (max-width: 680px) {
   .content {
+    margin-bottom: 50px;
+
     .title {
       max-width: 250px;
       font-size: 25px;
@@ -108,15 +110,17 @@
 
     .main__futer {
       margin-top: 90px;
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 45px;
+      max-width: 100%;
+      display: flex;
+      gap: 40px;
     }
   }
 
   .mentor {
     width: 275px;
     height: 432px;
+    right: -105px;
+    margin-top: 100px;
+    bottom: auto;
   }
 }

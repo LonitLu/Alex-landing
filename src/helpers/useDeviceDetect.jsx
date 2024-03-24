@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-// Хук useDeviceDetect по определению типа устройства
+// Хук useDeviceDetect для определению типа устройства
 const useDeviceDetect = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 680);
 
@@ -8,7 +8,7 @@ const useDeviceDetect = () => {
     // Отслеживаем изменение размера экрана здесь, моментально реагируя на любые его изменения
     const handleResize = () => setIsMobile(window.innerWidth < 680);
     window.addEventListener('resize', handleResize);
-    // Непременно удаляем обработчик, чтобы предотвратить утечку памяти
+    // удаляем обработчик, чтобы предотвратить утечку памяти
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 

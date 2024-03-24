@@ -1,14 +1,19 @@
 import styles from "./StylesFoter.module.scss";
-import DateSum from "../../halpers/DateSum";
+import DateSum from "../../helpers/DateSum";
+import useDeviceDetect from "../../helpers/useDeviceDetect";
 
 const Quantity = () => {
+  const { isMobile } = useDeviceDetect();
+  const textDesktop = "техник для достижения целей";
+  const textMobile = "техники";
+
   return (
     <div className={styles.inner}>
       <div className={styles.sum}>
         <div className={styles.tooltip}>Сумма цифровых значений даты</div>
-        <DateSum />
+        <DateSum />+
       </div>
-      <div className={styles.text}>техник для достижения целей</div>
+      <div className={styles.text}>{isMobile ? textMobile : textDesktop}</div>
     </div>
   );
 };
