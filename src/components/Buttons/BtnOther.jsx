@@ -26,6 +26,7 @@ const BtnOther = ({ text }) => {
 
 BtnOther.propTypes = {
   text: PropTypes.node,
+  toggleDetails: PropTypes.func,
 };
 
 export default BtnOther;

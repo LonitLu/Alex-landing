@@ -53,7 +53,7 @@ const Callback = ({ toggleDetails }) => {
 };
 
 Callback.propTypes = {
-  toggleDetails: PropTypes.node,
+  toggleDetails: PropTypes.func,
 };
 
 export default Callback;
