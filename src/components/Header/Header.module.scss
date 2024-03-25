@@ -19,10 +19,6 @@
   }
 }
 
-.menu__mobile {
-  display: none;
-}
-
 .nav__right {
   display: flex;
   align-items: center;
@@ -52,9 +48,5 @@
 
   .nav {
     display: none;
-  }
-
-  .menu__mobile {
-    display: block;
   }
 }

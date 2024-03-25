@@ -1,7 +1,7 @@
 import styles from "./Header.module.scss";
 import logoImg from "../../images/logo.svg";
 import phoneImg from "../../images/phone.svg";
-import menuMobileImg from "../../images/menuMobile.svg";
+import MenuMobile from "./MenuMobile/MenuMobile";
 
 const Header = () => {
   return (
@@ -34,7 +34,7 @@ const Header = () => {
       </nav>
 
       <ul className={styles.nav__right}>
-        <img className={styles.menu__mobile} src={menuMobileImg} alt="Меню" />
+        <MenuMobile />
 
         <li>
           <a href="tel:+73451233445">
