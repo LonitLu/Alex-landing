@@ -3,6 +3,7 @@ import img from "../../images/arrowWhite.png";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import CallbackEnd from "../CallbackEnd/CallbackEnd";
+// import Callback from "../Callback/Callback";
 
 const BtnForm = ({ text }) => {
   const [show, setShow] = useState(false);
@@ -11,6 +12,9 @@ const BtnForm = ({ text }) => {
     setShow(!show);
   };
 
+  // const toggleDetailsFalse = () => {
+  //   setShow(false);
+  // };
 
   return (
     <>
@@ -19,6 +23,7 @@ const BtnForm = ({ text }) => {
         <img className={stylesForm.btn__img} src={img} alt="" />
       </button>
       {show && <CallbackEnd toggleDetails={toggleDetails} />}
+      {/* {show && <Callback toggleDetails={toggleDetailsFalse} />} */}
     </>
   );
 };

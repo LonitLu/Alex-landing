@@ -6,7 +6,7 @@
   top: 0;
   z-index: 90;
   width: 100%;
-  height: 100%;
+  height: 117%;
   opacity: 0;
   animation: ani 1s forwards;
   -webkit-animation: ani 1s forwards;
@@ -18,5 +18,11 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .blur {
+    height: 100%;
   }
 }
