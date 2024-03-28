@@ -9,7 +9,13 @@
     width: 40px;
     border: 1px solid #fff;
     border-radius: 20px;
-  }
+    transition: 1s;
+    z-index: 92;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
 
   .navLineTop,
   .navLineCenter,
@@ -57,8 +63,14 @@
 }
 
   .menu__mobile--active {
+    margin-right: -50px;
     padding-left: 5px;
-  }
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
 
   .menu__mobile--active .navLineTop {
     width: 25px;

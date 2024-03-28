@@ -1,0 +1,38 @@
+@import "../../styles/stylesMixin.scss";
+
+@media (max-width: 910px) {
+  .nav__mobile {
+    display: none;
+    width: 320px;
+    height: 100dvh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 91;
+    padding: 100px 30px;
+    background: rgb(15, 29, 69);
+    animation: ani10601 0.5s linear;
+    -webkit-animation: ani10601 0.5s linear;
+
+    @keyframes ani10601 {
+      0% {
+        opacity: 0.2;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      @include font-monst;
+      font-size: 14px;
+    }
+  }
+
+  .nav__mobile--active {
+    display: block;
+  }
+}

@@ -5,7 +5,7 @@ const useDeviceDetect = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 680);
 
   useEffect(() => {
-    // Отслеживаем изменение размера экрана здесь, моментально реагируя на любые его изменения
+    // Отслеживаем изменение размера экрана, моментально реагируя на любые его изменения
     const handleResize = () => setIsMobile(window.innerWidth < 680);
     window.addEventListener('resize', handleResize);
     // удаляем обработчик, чтобы предотвратить утечку памяти

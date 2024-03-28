@@ -5,6 +5,7 @@ import Quantity from "../MainFuter/Quantity";
 import styles from "./Main.module.scss";
 import mentorImg from "../../images/mentor.png";
 import useDeviceDetect from "../../helpers/useDeviceDetect";
+import MenuMobileActive from "../Header/MenuMobile/MenuMobileActive";
 
 const Main = () => {
   const { isMobile } = useDeviceDetect();
@@ -30,6 +31,7 @@ const Main = () => {
         </div>
       </div>
       <img className={styles.mentor} src={mentorImg} alt="Ментор" />
+      <MenuMobileActive />
     </main>
   );
 };

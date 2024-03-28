@@ -8,11 +8,16 @@
   z-index: 100;
   left: 0;
   top: 0;
-  // margin-left: 600px;
+  //margin-left: 600px;
   padding: 40px 50px 40px 75px;
   background: rgb(15, 29, 69);
   animation: ani10601 0.2s linear;
   -webkit-animation: ani10601 0.2s linear;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 
   @keyframes ani10601 {
     0% {
