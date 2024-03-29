@@ -32,7 +32,7 @@ const MenuMobileActive = ({ addClass }) => {
 };
 
 MenuMobileActive.propTypes = {
-  addClass: PropTypes.func,
+  addClass: PropTypes.string,
 };
 
 export default MenuMobileActive;
