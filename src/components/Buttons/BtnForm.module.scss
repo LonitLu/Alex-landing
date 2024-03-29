@@ -1,5 +1,7 @@
 @import "../styles/stylesMixin.scss";
 
+@include btn-effect;
+
 .btn {
   max-width: 380px;
   height: 71px;

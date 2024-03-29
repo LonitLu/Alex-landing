@@ -13,8 +13,8 @@
   padding-right: 50px;
   padding-left: 75px;
   background: rgb(15, 29, 69);
-  animation: ani10601 0.5s linear ;
-  -webkit-animation: ani10601 0.5s linear ;
+  animation: ani10601 0.5s linear;
+  -webkit-animation: ani10601 0.5s linear;
 }
 
 @keyframes ani10601 {
@@ -28,6 +28,11 @@
 
 .exit {
   margin-left: auto;
+  cursor: pointer;
+}
+
+.exit:hover {
+  box-shadow: rgb(0, 91, 188) 5px 5px 10px, rgb(0, 91, 188) -5px -5px 10px;
 }
 
 .title {

@@ -12,6 +12,7 @@
 
 .nav {
   ul {
+    @include nav__btn-effect;
     display: flex;
     gap: 30px;
     @include font-monst;

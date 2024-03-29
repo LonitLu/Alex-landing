@@ -7,22 +7,22 @@ const MenuMobileActive = ({ addClass }) => {
     <>
       <nav className={`nav__mobile ${addClass}`}>
         <ul>
-          <li>
+          <li className="nav__item">
             <a href="#">Обо мне</a>
           </li>
-          <li>
+          <li className="nav__item">
             <a href="#">Наставничество</a>
           </li>
-          <li>
+          <li className="nav__item">
             <a href="#">Мероприятия</a>
           </li>
-          <li>
+          <li className="nav__item">
             <a href="#">Кейсы</a>
           </li>
-          <li>
+          <li className="nav__item">
             <a href="#">Отзывы</a>
           </li>
-          <li>
+          <li className="nav__item">
             <a href="#">Контакты</a>
           </li>
         </ul>

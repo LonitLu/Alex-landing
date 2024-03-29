@@ -1,8 +1,11 @@
 @import "../../styles/stylesMixin.scss";
 
+.nav__mobile {
+  display: none;
+}
+
 @media (max-width: 910px) {
   .nav__mobile {
-    display: none;
     width: 320px;
     height: 100dvh;
     position: absolute;
@@ -24,11 +27,16 @@
     }
 
     ul {
+      @include nav__btn-effect;
       display: flex;
       flex-direction: column;
       gap: 30px;
       @include font-monst;
       font-size: 14px;
+
+      .nav__item {
+        width: fit-content;
+      }
     }
   }
 
