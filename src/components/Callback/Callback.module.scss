@@ -52,7 +52,7 @@
   @include font-monst;
   font-size: 20px;
   line-height: 122.8%;
-  padding-bottom: 11px;
+  padding: 3px 3px 11px 3px;
   color: white;
   margin-top: 65px;
   background: none;
@@ -60,6 +60,13 @@
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  
+}
+
+.input__error {
+  color: red;
+  position: absolute;
+  padding-top: 40px;
 }
 
 .checkbox {

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import CallbackEnd from "../CallbackEnd/CallbackEnd";
 
-const BtnForm = ({ text }) => {
+const BtnForm = ({ text, btnDisabled }) => {
   // хука useState используется для управления видимостью элементов.
   const [show, setShow] = useState(false);
 
@@ -14,7 +14,7 @@ const BtnForm = ({ text }) => {
 
   return (
     <>
-      <button className={stylesForm.btn} onClick={toggleDetails}>
+      <button disabled={btnDisabled} className={stylesForm.btn} onClick={toggleDetails}>
         <p className={stylesForm.btn__text}>{text}</p>
         <img className={stylesForm.btn__img} src={img} alt="" />
       </button>
@@ -27,6 +27,7 @@ const BtnForm = ({ text }) => {
 
 BtnForm.propTypes = {
   text: PropTypes.node,
+  btnDisabled: PropTypes.bool,
 };
 
 export default BtnForm;
