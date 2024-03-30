@@ -3,7 +3,9 @@ import img from "../../images/arrowBlue.png";
 import useDeviceDetect from "../../helpers/useDeviceDetect";
 
 const BtnWhite = () => {
+  // определяем тип устройства (мобильное или десктоп)
   const { isMobile } = useDeviceDetect();
+  // В зависимости от типа устройства, текст кнопки меняется
   const textDesktop = "Записаться на консультацию";
   const textMobile = "Записаться";
 

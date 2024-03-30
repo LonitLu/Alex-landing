@@ -1,7 +1,6 @@
 import "./MenuMobileActive.scss";
 import PropTypes from "prop-types";
 
-
 const MenuMobileActive = ({ addClass }) => {
   return (
     <>

@@ -6,9 +6,12 @@ import styles from "./Main.module.scss";
 import mentorImg from "../../images/mentor.png";
 import useDeviceDetect from "../../helpers/useDeviceDetect";
 import MenuMobileActive from "../Header/MenuMobile/MenuMobileActive";
+import Callback from "../Callback/Callback";
 
 const Main = () => {
+  // определяем тип устройства (мобильное или десктоп)
   const { isMobile } = useDeviceDetect();
+  // В зависимости от типа устройства, текст меняется
   const textDesktop =
     "Когда ваше время и энергия лучше сфокусированы, стремление к новым возможностям становится реальностью,  ваш успех зависит от ваших действий";
   const textMobile = "Ваш успех зависит от ваших действий";
@@ -32,6 +35,7 @@ const Main = () => {
       </div>
       <img className={styles.mentor} src={mentorImg} alt="Ментор" />
       <MenuMobileActive />
+      <Callback />
     </main>
   );
 };

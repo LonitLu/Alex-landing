@@ -1,9 +1,10 @@
 @import "../styles/stylesMixin.scss";
 
 .callback {
+  display: none;
   max-width: 612px;
   height: 117%;
-  display: flex;
+  // display: flex;
   flex-direction: column;
   position: absolute;
   z-index: 100;

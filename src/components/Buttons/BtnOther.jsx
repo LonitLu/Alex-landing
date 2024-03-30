@@ -6,10 +6,15 @@ import Callback from "../Callback/Callback";
 import BlurForm from "../Blur/BlurForm";
 
 const BtnOther = ({ text }) => {
+  // хука useState используется для управления видимостью элементов.
   const [show, setShow] = useState(false);
 
   const toggleDetails = () => {
     setShow(!show);
+  };
+
+  const removeClass = () => {
+    setShow(false);
   };
 
   return (
@@ -18,7 +23,13 @@ const BtnOther = ({ text }) => {
         <p className={styles.btn__text}>{text}</p>
         <img className={styles.btn__img} src={img} alt="" />
       </button>
-      {show && <Callback toggleDetails={toggleDetails} />}
+      <Callback
+        // управляет классами компонента на основе значений переменных `show` и `removeClass`
+        addClass={show ? "callbackActive" : ""}
+        removeClass={removeClass}
+      />
+      {/* Когда `show` равно `true`, компонент будет отображен на
+      странице */}
       {show && <BlurForm toggleDetails={toggleDetails} />}
     </>
   );

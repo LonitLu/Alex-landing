@@ -4,6 +4,7 @@ import Blur from "../../Blur/Blur";
 import MenuMobileActive from "./MenuMobileActive";
 
 const MenuMobile = () => {
+  // хука useState используется для управления видимостью элементов.
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {

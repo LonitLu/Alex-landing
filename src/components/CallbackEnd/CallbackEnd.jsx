@@ -4,6 +4,7 @@ import logoImg from "../../images/logo.svg";
 import PropTypes from "prop-types";
 
 const CallbackEnd = ({ toggleDetails }) => {
+  //функция handleClose, которая вызывает функцию removeClass при закрытии модального окна.
   const handleClose = () => {
     toggleDetails();
   };

@@ -3,7 +3,9 @@ import DateSum from "../../helpers/DateSum";
 import useDeviceDetect from "../../helpers/useDeviceDetect";
 
 const Quantity = () => {
+  // определяем тип устройства (мобильное или десктоп)
   const { isMobile } = useDeviceDetect();
+  // В зависимости от типа устройства, текст меняется
   const textDesktop = "техник для достижения целей";
   const textMobile = "техники";
 

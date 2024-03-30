@@ -16,7 +16,7 @@
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
-}
+  }
 
   .navLineTop,
   .navLineCenter,
@@ -49,7 +49,7 @@
     -moz-transform: translateX(500%);
     -ms-transform: translateX(500%);
     -o-transform: translateX(500%);
-}
+  }
 
   .navLineCenter--active {
     opacity: 0.5;
@@ -61,7 +61,7 @@
     -ms-transform: translateX(500%);
     -o-transform: translateX(500%);
     visibility: hidden;
-}
+  }
 
   .menu__mobile--active {
     margin-right: -50px;
@@ -71,7 +71,7 @@
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
-}
+  }
 
   .menu__mobile--active .navLineTop {
     width: 25px;

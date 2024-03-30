@@ -12,6 +12,7 @@
   font-style: normal;
 }
 
+// эффекты для кнопок
 @mixin btn-effect {
   .btn {
     cursor: pointer;
@@ -50,6 +51,7 @@
   }
 }
 
+// эффекты для кнопок навигации шапке
 @mixin nav__btn-effect {
   .nav__item a {
     cursor: pointer;
