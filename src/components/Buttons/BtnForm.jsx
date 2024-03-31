@@ -14,7 +14,7 @@ const BtnForm = ({ text, btnDisabled }) => {
 
   return (
     <>
-      <button disabled={btnDisabled} className={stylesForm.btn} onClick={toggleDetails}>
+      <button type="submit" disabled={btnDisabled} className={stylesForm.btn} onClick={toggleDetails}>
         <p className={stylesForm.btn__text}>{text}</p>
         <img className={stylesForm.btn__img} src={img} alt="" />
       </button>

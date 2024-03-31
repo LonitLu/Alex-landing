@@ -12,8 +12,8 @@ const Callback = ({ removeClass, addClass }) => {
   };
 
   // валидация формы
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [name, setName] = useState(JSON.parse(localStorage.getItem("name")) || []);
+  const [phone, setPhone] = useState(JSON.parse(localStorage.getItem("phone")) || []);
   const [checked, setChecked] = useState("");
 
   const [nameActive, setNameActive] = useState(false);
@@ -50,6 +50,7 @@ const Callback = ({ removeClass, addClass }) => {
     } else {
       setNameError("");
     }
+    localStorage.setItem("name", JSON.stringify(e.target.value));
   };
 
   // изменяем состояние на то, что находится в значении текущего таргета
@@ -69,6 +70,7 @@ const Callback = ({ removeClass, addClass }) => {
     } else {
       setPhoneError("");
     }
+    localStorage.setItem("phone", JSON.stringify(e.target.value));
   };
 
   // смотрим на курсор в инпуте или нет
@@ -109,7 +111,7 @@ const Callback = ({ removeClass, addClass }) => {
           Закажите <br />
           обратный звонок
         </h2>
-        <form className={styles.form} action="">
+        <form id="form" className={styles.form} action="">
           <label htmlFor="name">
             {nameActive && nameError && (
               <div className={styles.input__error}>{nameError}</div>
