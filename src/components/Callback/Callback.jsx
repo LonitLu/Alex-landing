@@ -10,23 +10,35 @@ const Callback = ({ removeClass, addClass }) => {
   const handleClose = () => {
     removeClass();
   };
+
   // валидация формы
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [checked, setChecked] = useState("");
+
   const [nameActive, setNameActive] = useState(false);
   const [phoneActive, setPhoneActive] = useState(false);
+  const [checkedActive, setCheckedActive] = useState(false);
+
   const [nameError, setNameError] = useState("Введите имя");
   const [phoneError, setPhoneError] = useState("Введите номер");
+  const [checkedError, setCheckedError] = useState(
+    "Необходимо согласие на обработку персональных данных"
+  );
+
   const [formValid, setFormValid] = useState(false);
 
+  // валидация формы
   useEffect(() => {
-    if (nameError || phoneError) {
+    if (nameError || phoneError || checkedError) {
       setFormValid(false);
     } else {
       setFormValid(true);
     }
-  }, [nameError, phoneError]);
+  }, [nameError, phoneError, checkedError]);
 
+  // изменяем состояние на то, что находится в значении текущего таргета
+  // + валидация и вывод сообщения в случае не соответствия
   const nameHandler = (e) => {
     setName(e.target.value);
     const validName = /^[а-яА-ЯёЁa-zA-Z]+$/;
@@ -40,17 +52,8 @@ const Callback = ({ removeClass, addClass }) => {
     }
   };
 
-  const blurHandler = (e) => {
-    switch (e.target.name) {
-      case "name":
-        setNameActive(true);
-        break;
-      case "phone":
-        setPhoneActive(true);
-        break;
-    }
-  };
-
+  // изменяем состояние на то, что находится в значении текущего таргета
+  // + валидация и вывод сообщения в случае не соответствия
   const phoneHandler = (e) => {
     setPhone(e.target.value);
     const validPhone = /^[0-9]*$/;
@@ -65,6 +68,31 @@ const Callback = ({ removeClass, addClass }) => {
       }
     } else {
       setPhoneError("");
+    }
+  };
+
+  // смотрим на курсор в инпуте или нет
+  const blurHandler = (e) => {
+    switch (e.target.name) {
+      case "name":
+        setNameActive(true);
+        break;
+      case "phone":
+        setPhoneActive(true);
+        break;
+      case "checked":
+        setCheckedActive(true);
+        break;
+    }
+  };
+
+  // проверка на состояние чекбокса
+  const checkedHandler = (e) => {
+    setChecked(e.target.checked);
+    if (!e.target.checked) {
+      setCheckedError("Необходимо согласие на обработку персональных данных");
+    } else {
+      setCheckedError("");
     }
   };
 
@@ -116,7 +144,16 @@ const Callback = ({ removeClass, addClass }) => {
           </label>
 
           <label className={styles.checkbox}>
-            <input type="checkbox" name="agree" />
+            {checkedActive && checkedError && (
+              <div className={styles.input__error}>{checkedError}</div>
+            )}
+            <input
+              onChange={(e) => checkedHandler(e)}
+              onBlur={(e) => blurHandler(e)}
+              value={checked}
+              type="checkbox"
+              name="checked"
+            />
             <span>Согласен на сохранение и обработку персональных данных</span>
           </label>
         </form>
