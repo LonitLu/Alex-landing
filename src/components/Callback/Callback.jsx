@@ -98,6 +98,36 @@ const Callback = ({ removeClass, addClass }) => {
     }
   };
 
+
+// код проверяет данные из `localStorage` при первом рендере компонента 
+useEffect(() => {
+  if (name) {
+    const validName = /^[а-яА-ЯёЁa-zA-Z]+$/;
+    if (!validName.test(String(name).toLowerCase())) {
+      setNameError("Не корректное имя");
+    } else {
+      setNameError("");
+    }
+  }
+
+  if (phone) {
+    const validPhone = /^[0-9]*$/;
+    if (
+      phone.length < 3 ||
+      phone.length > 15 ||
+      !validPhone.test(Number(phone))
+    ) {
+      setPhoneError("Не корректный номер");
+    } else {
+      setPhoneError("");
+    }
+  }
+}, [name, phone]);
+
+
+
+
+
   return (
     <>
       <div className={`${styles.callback} ${addClass}`}>
